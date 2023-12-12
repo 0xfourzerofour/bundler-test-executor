@@ -1,0 +1,13 @@
+services:
+  bundler:
+    image: alchemyplatform/rundler:latest
+    environment:
+      - BUILDER_PRIVATE_KEY=0x0000000000000000000000000000000000000000000000000000000000000002
+      - NODE_HTTP=$ETH_RPC_URL
+      - ENTRY_POINTS=$ENTRYPOINT
+      - MIN_UNSTAKE_DELAY=2
+      - RPC_API=eth,debug
+      - RUST_LOG=info
+    ports: 
+      - '3000:3000'
+      - '8080:8080'
