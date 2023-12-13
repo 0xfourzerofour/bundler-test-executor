@@ -11,8 +11,12 @@ services:
       --http.corsdomain '*'
       --http.addr "0.0.0.0"
       --networkid 1337
+      --ignore-legacy-receipts
       --dev
       --dev.period 0
       --allow-insecure-unlock
       --rpc.allow-unprotected-txs
       --dev.gaslimit 20000000
+      --mine
+      --miner.threads 1
+      --miner.gaslimit 12000000
